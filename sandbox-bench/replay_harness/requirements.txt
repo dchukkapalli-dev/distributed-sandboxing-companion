@@ -1,0 +1,5 @@
+# sandbox-bench replay harness — dependencies
+#
+# NONE. cpu_pilot.py and validate_trace.py are pure Python 3 standard library
+# (argparse, json, random, sys). No third-party packages are required or pinned.
+# Any CPython >= 3.8 will run them.

@@ -1,0 +1,57 @@
+# sandbox-bench trace schema (v0.1) — the contract of the survey (§9).
+#
+# A trace is a JSON Lines file: one JSON object per line, each a single
+# sandbox-execution record from one agent turn. The schema is mechanism- and
+# scheduler-agnostic so that any agent-code-execution system can emit it.
+#
+# The required/optional fields are the eight taxonomy axes (A1-A8) plus three
+# agentic extensions (turn_index, stateful, egress_policy). The validator
+# (validate_trace.py) ALSO carries this schema as a Python dict, so it runs
+# without any YAML library; this file is the human-readable source of truth and
+# is kept byte-compatible with that embedded copy.
+
+schema_version: "0.1"
+record_types: [exec]
+
+fields:
+  # --- common record framing ---
+  record_type:           {type: str,   required: true,  enum: [exec], desc: "record kind; one sandbox execution"}
+  turn_index:            {type: int,   required: true,  desc: "agent-turn index within the session (>=0); agentic extension"}
+
+  # --- A1 mechanism class ---
+  mechanism_class:       {type: str,   required: true,  enum: [microvm-snapshot, gvisor-restore, wasm-sfi, container, unikernel, tee-enclave, tee-cvm], desc: "A1: isolation mechanism class"}
+
+  # --- A2 start latency ---
+  startup_ms:            {type: float, required: true,  desc: "A2: start/restore latency on the agent-turn critical path, milliseconds"}
+
+  # --- A3 steady-state overhead ---
+  steadystate_overhead:  {type: float, required: false, desc: "A3: steady-state overhead factor vs native baseline (e.g. 1.0=native); optional"}
+
+  # --- A4 isolation depth / TCB ---
+  tcb_depth:             {type: str,   required: true,  enum: [shared-host-kernel, user-space-sentry, per-guest-kernel, sfi-in-process, hw-root-of-trust], desc: "A4: isolation depth / trusted-computing-base shape"}
+
+  # --- A5 memory footprint / density ---
+  mem_footprint_mb:      {type: float, required: true,  desc: "A5: per-sandbox resident memory footprint, megabytes"}
+  density:               {type: int,   required: false, desc: "A5: co-resident sandboxes per host at the fixed budget; optional"}
+
+  # --- A6 stateful restore ---
+  restore_kind:          {type: str,   required: true,  enum: [cold, warm, fork, remote-fork, none], desc: "A6: restore path taken for this execution"}
+  restore_ms:            {type: float, required: false, desc: "A6: restore-path latency, milliseconds; optional/null when restore_kind=none"}
+
+  # --- A7 adversary model ---
+  adversary_model:       {type: str,   required: true,  enum: [benign-tenant, buggy-code, malicious-tenant, malicious-guest-os, active-escape, side-channel, prompt-injection], desc: "A7: adversary the configuration assumes"}
+
+  # --- A8 scheduling treatment ---
+  scheduler:             {type: str,   required: true,  enum: [none, partial, yes-explicit], desc: "A8: whether fleet-level scheduling/density is exercised"}
+
+  # --- agentic extensions ---
+  stateful:              {type: bool,  required: true,  desc: "agentic extension: does this sandbox carry per-session state across turns?"}
+  egress_policy:         {type: str,   required: true,  enum: [default-deny, allowlist, open], desc: "agentic extension: per-sandbox network egress policy"}
+
+reporting_template:
+  # The aggregate fields the replay harness emits (§9 of the paper).
+  - mean_startup_ms                # mean A2 over all records
+  - cold_mean_restore_ms           # mean A6 restore over cold-cache records
+  - warm_mean_restore_ms           # mean A6 restore over warm-cache records
+  - cold_warm_restore_ratio        # cold/warm separation (must be > 1)
+  - mean_mem_footprint_mb          # mean A5 footprint

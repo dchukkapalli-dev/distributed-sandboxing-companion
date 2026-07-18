@@ -1,0 +1,874 @@
+% ---- Foundational isolation primitives ----------------------
+
+@inproceedings{firecracker20,
+  author    = {Agache, Alexandru and Brooker, Marc and Florescu, Alexandra and
+               Iordache, Alexandru and Liguori, Anthony and Neugebauer, Rolf and
+               Piwonka, Phil and Popa, Diana-Maria},
+  title     = {{Firecracker: Lightweight Virtualization for Serverless Applications}},
+  booktitle = {17th USENIX Symposium on Networked Systems Design and
+               Implementation (NSDI 20)},
+  year      = {2020}
+}
+
+@inproceedings{gvisor19,
+  author    = {Young, Ethan G. and Zhu, Pengfei and Caraza-Harter, Tyler and
+               Arpaci-Dusseau, Andrea C. and Arpaci-Dusseau, Remzi H.},
+  title     = {{The True Cost of Containing: A gVisor Case Study}},
+  booktitle = {11th USENIX Workshop on Hot Topics in Cloud Computing (HotCloud 19)},
+  year      = {2019}
+}
+
+@inproceedings{faasm20,
+  author    = {Shillaker, Simon and Pietzuch, Peter},
+  title     = {{Faasm: Lightweight Isolation for Efficient Stateful Serverless Computing}},
+  booktitle = {2020 USENIX Annual Technical Conference (USENIX ATC 20)},
+  pages     = {419--433},
+  year      = {2020},
+  note      = {arXiv:2002.09344}
+}
+
+% ---- Sandbox lifecycle, scheduling, cold-start --------------
+
+@article{coldstart23,
+  author  = {Golec, Muhammed and Walia, Guneet Kaur and Kumar, Mohit and
+             Cuadrado, Felix and Gill, Sukhpal Singh and Uhlig, Steve},
+  title   = {{Cold Start Latency in Serverless Computing: A Systematic Review,
+              Taxonomy, and Future Directions}},
+  journal = {ACM Computing Surveys},
+  volume  = {57},
+  number  = {3},
+  pages   = {72:1--72:36},
+  year    = {2025},
+  doi     = {10.1145/3700875},
+  note    = {arXiv:2310.08437}
+}
+
+@misc{spice25,
+  author       = {Holmes, Ben and Dinis, Baltasar and Honcharuk, Lana and
+                  Fried, Joshua and Belay, Adam},
+  title        = {{Taming Serverless Cold Starts Through OS Co-Design}},
+  howpublished = {arXiv:2509.14292},
+  year         = {2025}
+}
+
+@misc{raptor24,
+  author       = {Exton, Kevin and Read, Maria},
+  title        = {{Raptor: Distributed Scheduling for Serverless Functions}},
+  howpublished = {arXiv:2403.16457},
+  year         = {2024}
+}
+
+% ---- WebAssembly isolation ----------------------------------
+
+@inproceedings{wasmresource25,
+  author    = {Yu, Zhaofeng and Zhan, Dongyang and Ye, Lin and Yu, Haining and
+               Zhang, Hongli and Tian, Zhihong},
+  title     = {{Exploring and Exploiting the Resource Isolation Attack Surface
+               of WebAssembly Containers}},
+  booktitle = {34th USENIX Security Symposium (USENIX Security 25)},
+  year      = {2025},
+  note      = {arXiv:2509.11242}
+}
+
+% ---- Agentic threat models and security surveys -------------
+
+@inproceedings{injecagent24,
+  author    = {Zhan, Qiusi and Liang, Zhixiang and Ying, Zifan and Kang, Daniel},
+  title     = {{InjecAgent: Benchmarking Indirect Prompt Injections in
+                Tool-Integrated Large Language Model Agents}},
+  booktitle = {Findings of the Association for Computational Linguistics:
+               ACL 2024},
+  pages     = {10471--10506},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-acl.624},
+  note      = {arXiv:2403.02691}
+}
+
+@misc{agenticsecurity25,
+  author       = {Shahriar, Asif and Rahman, Md Nafiu and Ahmed, Sadif and
+                  Sadeque, Farig and Parvez, Md Rizwan},
+  title        = {{A Survey on Agentic Security: Applications, Threats and Defenses}},
+  howpublished = {arXiv:2510.06445},
+  year         = {2025}
+}
+
+@misc{sokatk26,
+  author       = {Dehghantanha, Ali and Homayoun, Sajad},
+  title        = {{SoK: The Attack Surface of Agentic AI---Tools, and Autonomy}},
+  howpublished = {arXiv:2603.22928},
+  year         = {2026}
+}
+
+@misc{layeredattack26,
+  author       = {Chu, Kexin},
+  title        = {{A Systematic Survey of Security Threats and Defenses in
+                   LLM-Based AI Agents: A Layered Attack Surface Framework}},
+  howpublished = {arXiv:2604.23338},
+  year         = {2026}
+}
+
+@misc{confidagentic26,
+  author       = {Forough, Javad and Kogias, Marios and Haddadi, Hamed},
+  title        = {{When Agents Handle Secrets: A Survey of Confidential
+                   Computing for Agentic AI}},
+  howpublished = {arXiv:2605.03213},
+  year         = {2026}
+}
+
+% ---- Transactional and fault-tolerant sandboxing ------------
+
+@misc{faultsandbox25,
+  author       = {Yan, Boyang},
+  title        = {{Fault-Tolerant Sandboxing for AI Coding Agents: A
+                   Transactional Approach to Safe Autonomous Execution}},
+  howpublished = {arXiv:2512.12806},
+  year         = {2025}
+}
+
+% ---- Sandbox-escape evaluation ------------------------------
+
+@misc{sandboxescape26,
+  author       = {Marchand, Rahul and {O Cathain}, Art and Wynne, Jerome and
+                  Giavridis, Philippos Maximos and Deverett, Sam and Wilkinson, John and
+                  Gwartz, Jason and Coppock, Harry},
+  title        = {{Quantifying Frontier LLM Capabilities for Container
+                   Sandbox Escape}},
+  howpublished = {arXiv:2603.02277},
+  year         = {2026}
+}
+
+% ---- Secure code-generation benchmarks ---------------------
+
+@inproceedings{secbench25,
+  author    = {Lee, Hwiwon and Zhang, Ziqi and Lu, Hanxiao and Zhang, Lingming},
+  title     = {{SEC-bench: Automated Benchmarking of LLM Agents on
+               Real-World Software Security Tasks}},
+  booktitle = {Advances in Neural Information Processing Systems 38
+               (NeurIPS 2025) Datasets and Benchmarks Track},
+  year      = {2025},
+  note      = {arXiv:2506.11791}
+}
+
+
+% ============================================================
+% Stage-4 deep-research additions
+% ============================================================
+
+@inproceedings{catalyzer20,
+  author    = {Du, Dong and Yu, Tianyi and Xia, Yubin and Zang, Binyu and
+               Yan, Guanglu and Qin, Chenggang and Wu, Qixuan and Chen, Haibo},
+  title     = {{Catalyzer: Sub-millisecond Startup for Serverless Computing
+               with Initialization-less Booting}},
+  booktitle = {25th International Conference on Architectural Support for
+               Programming Languages and Operating Systems (ASPLOS '20)},
+  year      = {2020},
+  doi       = {10.1145/3373376.3378512}
+}
+
+@inproceedings{reap21,
+  author    = {Ustiugov, Dmitrii and Petrov, Plamen and Kogias, Marios and
+               Bugnion, Edouard and Grot, Boris},
+  title     = {{Benchmarking, Analysis, and Optimization of Serverless
+                Function Snapshots}},
+  booktitle = {26th International Conference on Architectural Support for
+               Programming Languages and Operating Systems (ASPLOS '21)},
+  year      = {2021},
+  doi       = {10.1145/3445814.3446714},
+  note      = {arXiv:2101.09355}
+}
+
+@inproceedings{faasnap22,
+  author    = {Ao, Lixiang and Porter, George and Voelker, Geoffrey M.},
+  title     = {{FaaSnap: FaaS Made Fast Using Snapshot-based VMs}},
+  booktitle = {17th European Conference on Computer Systems (EuroSys '22)},
+  year      = {2022},
+  doi       = {10.1145/3492321.3524270}
+}
+
+@misc{microvmuniq21,
+  author       = {Brooker, Marc and Catangiu, Adrian Costin and Danilov, Mike and
+                  Graf, Alexander and MacCarthaigh, Colm and Sandu, Andrei},
+  title        = {{Restoring Uniqueness in MicroVM Snapshots}},
+  howpublished = {arXiv:2102.12892},
+  year         = {2021}
+}
+
+@inproceedings{seuss20,
+  author    = {Cadden, James and Unger, Thomas and Awad, Yara and Dong, Han and
+               Krieger, Orran and Appavoo, Jonathan},
+  title     = {{SEUSS: Skip Redundant Paths to Make Serverless Fast}},
+  booktitle = {15th European Conference on Computer Systems (EuroSys '20)},
+  year      = {2020},
+  doi       = {10.1145/3342195.3392698}
+}
+
+@inproceedings{sock18,
+  author    = {Oakes, Edward and Yang, Leon and Zhou, Dennis and Houck, Kevin and
+               Harter, Tyler and Arpaci-Dusseau, Andrea C. and
+               Arpaci-Dusseau, Remzi H.},
+  title     = {{SOCK: Rapid Task Provisioning with Serverless-Optimized
+               Containers}},
+  booktitle = {2018 USENIX Annual Technical Conference (USENIX ATC 18)},
+  year      = {2018}
+}
+
+@article{gfuzz24,
+  author  = {Li, Yuwei and Chen, Yuan and Ji, Shouling and Zhang, Xuhong and
+             Yan, Guanglu and Liu, Alex X. and Wu, Chunming and Pan, Zulie and
+             Lin, Peng},
+  title   = {{G-Fuzz: A Directed Fuzzing Framework for gVisor}},
+  journal = {IEEE Transactions on Dependable and Secure Computing},
+  volume  = {21},
+  number  = {1},
+  pages   = {168--185},
+  year    = {2024},
+  doi     = {10.1109/TDSC.2023.3244825},
+  note    = {arXiv:2409.13139}
+}
+
+@inproceedings{nightcore21,
+  author    = {Jia, Zhipeng and Witchel, Emmett},
+  title     = {{Nightcore: Efficient and Scalable Serverless Computing for
+               Latency-Sensitive, Interactive Microservices}},
+  booktitle = {26th International Conference on Architectural Support for
+               Programming Languages and Operating Systems (ASPLOS '21)},
+  year      = {2021},
+  doi       = {10.1145/3445814.3446701}
+}
+
+@misc{pagurus22,
+  author       = {Li, Zijun and Chen, Quan and Guo, Minyi},
+  title        = {{Pagurus: Eliminating Cold Startup in Serverless Computing
+                   with Inter-Action Container Sharing}},
+  howpublished = {arXiv:2108.11240},
+  year         = {2021}
+}
+
+@inproceedings{unikraft21,
+  author    = {Kuenzer, Simon and B{\u{a}}descu, Vlad-Andrei and Lefeuvre, Hugo and
+               Santhanam, Sharan and Jung, Alexander and Gain, Gaulthier and
+               Soldani, Cyril and Lupu, Costin and Teodorescu, {\c{S}}tefan and
+               R{\u{a}}ducanu, Costi and Banu, Cristian and Mathy, Laurent and
+               Deaconescu, R{\u{a}}zvan and Raiciu, Costin and Huici, Felipe},
+  title     = {{Unikraft: Fast, Specialized Unikernels the Easy Way}},
+  booktitle = {16th European Conference on Computer Systems (EuroSys '21)},
+  year      = {2021},
+  doi       = {10.1145/3447786.3456248},
+  note      = {Best Paper Award}
+}
+
+@inproceedings{unikernelproc18,
+  author    = {Williams, Dan and Koller, Ricardo and Lucina, Martin and
+               Prakash, Nikhil},
+  title     = {{Unikernels as Processes}},
+  booktitle = {ACM Symposium on Cloud Computing (SoCC '18)},
+  year      = {2018},
+  doi       = {10.1145/3267809.3267845}
+}
+
+@inproceedings{wali24,
+  author    = {Ramesh, Arjun and Schmidt, Tobias and Niu, Ben and
+               McLaughlin, John and Crahen, Sam and Csordas, Robert},
+  title     = {{Empowering WebAssembly with Thin Kernel Interfaces}},
+  booktitle = {20th European Conference on Computer Systems (EuroSys '25)},
+  year      = {2025},
+  doi       = {10.1145/3689031.3717470},
+  note      = {WebAssembly Linux Interface (WALI); arXiv:2312.03858}
+}
+
+@inproceedings{sledge20,
+  author    = {Gadepalli, Phani Kishore and McBride, Sean and Peach, Gregor and
+               Cherkasova, Ludmila and Parmer, Gabriel},
+  title     = {{Sledge: A Serverless-first, Light-weight Wasm Runtime for the
+               Edge}},
+  booktitle = {21st International Middleware Conference (Middleware '20)},
+  year      = {2020},
+  doi       = {10.1145/3423211.3425680}
+}
+
+@article{wasmsurvey24,
+  author  = {Perrone, Gaetano and Romano, Simon Pietro},
+  title   = {{WebAssembly and Security: A Review}},
+  journal = {Computer Science Review},
+  volume  = {56},
+  pages   = {100728},
+  year    = {2025},
+  doi     = {10.1016/j.cosrev.2025.100728},
+  note    = {arXiv:2407.12297}
+}
+
+@article{wasmruntime24,
+  author  = {Zhang, Yixuan and Liu, Mugeng and Wang, Haoyu and Ma, Yun and
+             Huang, Gang and Liu, Xuanzhe},
+  title   = {{Research on WebAssembly Runtimes: A Survey}},
+  journal = {ACM Transactions on Software Engineering and Methodology},
+  volume  = {34},
+  number  = {8},
+  pages   = {239:1--239:47},
+  year    = {2025},
+  doi     = {10.1145/3714465},
+  note    = {arXiv:2404.12621}
+}
+
+@article{tdxdemystified23,
+  author  = {Cheng, Pau-Chen and Ozga, Wojciech and Valdez, Enriquillo and
+             Ahmed, Salman and Gu, Zhongshu and Jamjoom, Hani and
+             Franke, Hubertus and Bottomley, James},
+  title   = {{Intel TDX Demystified: A Top-Down Approach}},
+  journal = {ACM Computing Surveys},
+  volume  = {56},
+  number  = {9},
+  pages   = {238:1--238:33},
+  year    = {2024},
+  doi     = {10.1145/3652597},
+  note    = {arXiv:2303.15540}
+}
+
+@article{sevsnpformal24,
+  author  = {Parad{\v{z}}ik, Petar and Derek, Ante and Horvat, Marko},
+  title   = {{Formal Security Analysis of the AMD SEV-SNP Software Interface}},
+  journal = {IEEE Transactions on Dependable and Secure Computing},
+  volume  = {22},
+  number  = {4},
+  pages   = {3289--3306},
+  year    = {2025},
+  doi     = {10.1109/TDSC.2025.3528737},
+  note    = {arXiv:2403.10296}
+}
+
+@article{cvmexplained25,
+  author  = {Misono, Masanori and Stavrakakis, Dimitrios and Santos, Nuno and
+             Bhatotia, Pramod},
+  title   = {{Confidential VMs Explained: An Empirical Analysis of AMD
+              SEV-SNP and Intel TDX}},
+  journal = {Proceedings of the ACM on Measurement and Analysis of Computing
+             Systems (POMACS)},
+  volume  = {8},
+  number  = {3},
+  pages   = {36:1--36:42},
+  year    = {2024},
+  doi     = {10.1145/3700418},
+  note    = {Presented at SIGMETRICS '25; arXiv:2406.03143}
+}
+
+@inproceedings{occlum20,
+  author    = {Shen, Youren and Tian, Hongliang and Chen, Yu and Chen, Kang and
+               Wang, Runji and Xu, Yi and Xia, Yubin and Yan, Shoumeng},
+  title     = {{Occlum: Secure and Efficient Multitasking Inside a Single
+               Enclave of Intel SGX}},
+  booktitle = {25th International Conference on Architectural Support for
+               Programming Languages and Operating Systems (ASPLOS '20)},
+  year      = {2020},
+  doi       = {10.1145/3373376.3378469}
+}
+
+@inproceedings{teecontainer25,
+  author    = {Liu, Weijie and Chen, Hongbo and Huai, Shuo and Xu, Zhen and
+               Wang, Wenhao and Li, Zhi and Liu, Zheli},
+  title     = {{Characterizing Trust Boundary Vulnerabilities in TEE
+               Container Systems: An Empirical Study}},
+  booktitle = {Proceedings of the ACM International Conference on the
+               Foundations of Software Engineering (FSE 2026)},
+  year      = {2026},
+  note      = {arXiv:2508.20962}
+}
+
+@article{epstein08bpc,
+  author  = {Epstein, Leah and Levin, Asaf},
+  title   = {{On Bin Packing with Conflicts}},
+  journal = {SIAM Journal on Optimization},
+  volume  = {19},
+  number  = {3},
+  pages   = {1270--1298},
+  year    = {2008},
+  doi     = {10.1137/060666329}
+}
+
+@article{zuckerman07,
+  author  = {Zuckerman, David},
+  title   = {{Linear Degree Extractors and the Inapproximability of Max Clique
+              and Chromatic Number}},
+  journal = {Theory of Computing},
+  volume  = {3},
+  number  = {1},
+  pages   = {103--128},
+  year    = {2007},
+  doi     = {10.4086/toc.2007.v003a006}
+}
+
+@inproceedings{borg15,
+  author    = {Verma, Abhishek and Pedrosa, Luis and Korupolu, Madhukar and
+               Oppenheimer, David and Tune, Eric and Wilkes, John},
+  title     = {{Large-scale Cluster Management at Google with Borg}},
+  booktitle = {10th European Conference on Computer Systems (EuroSys '15)},
+  year      = {2015},
+  doi       = {10.1145/2741948.2741964}
+}
+
+@inproceedings{serverlesswild20,
+  author    = {Shahrad, Mohammad and Fonseca, Rodrigo and Goiri, {\'I}{\~n}igo and
+               Chaudhry, Gohar and Batum, Paul and Cooke, Jason and
+               Laureano, Eduardo and Tresness, Colby and Russinovich, Mark and
+               Bianchini, Ricardo},
+  title     = {{Serverless in the Wild: Characterizing and Optimizing the
+               Serverless Workload at a Large Cloud Provider}},
+  booktitle = {2020 USENIX Annual Technical Conference (USENIX ATC 20)},
+  year      = {2020}
+}
+
+@article{serverlesssurvey19,
+  author  = {Hassan, Hassan B. and Barakat, Saman A. and Sarhan, Qusay I.},
+  title   = {{Survey on Serverless Computing}},
+  journal = {Journal of Cloud Computing},
+  volume  = {10},
+  number  = {1},
+  pages   = {39},
+  year    = {2021},
+  doi     = {10.1186/s13677-021-00253-7},
+  note    = {arXiv:2105.13540}
+}
+
+@misc{coldstartproactive25,
+  author       = {Nguyen, Chanh and Bhuyan, Monowar and Elmroth, Erik},
+  title        = {{Taming Cold Starts: Proactive Serverless Scheduling with
+                   Model Predictive Control}},
+  howpublished = {arXiv:2508.07640},
+  year         = {2025}
+}
+
+@inproceedings{react23,
+  author    = {Yao, Shunyu and Zhao, Jeffrey and Yu, Dian and Du, Nan and
+               Shafran, Izhak and Narasimhan, Karthik and Cao, Yuan},
+  title     = {{ReAct: Synergizing Reasoning and Acting in Language Models}},
+  booktitle = {11th International Conference on Learning Representations (ICLR 2023)},
+  year      = {2023}
+}
+
+@article{llmagentsurvey23,
+  author  = {Wang, Lei and Ma, Chen and Feng, Xueyang and Zhang, Zeyu and
+             Yang, Hao and Zhang, Jingsen and Chen, Zhiyuan and Tang, Jiakai and
+             Chen, Xu and Lin, Yankai and Zhao, Wayne Xin and Wei, Zhewei and
+             Wen, Jirong},
+  title   = {{A Survey on Large Language Model based Autonomous Agents}},
+  journal = {Frontiers of Computer Science},
+  volume  = {18},
+  number  = {6},
+  pages   = {186345},
+  year    = {2024},
+  doi     = {10.1007/s11704-024-40231-1},
+  note    = {arXiv:2308.11432}
+}
+
+@inproceedings{sweagent24,
+  author    = {Yang, John and Jimenez, Carlos E. and Wettig, Alexander and
+               Lieret, Kilian and Yao, Shunyu and Narasimhan, Karthik and
+               Press, Ofir},
+  title     = {{SWE-agent: Agent-Computer Interfaces Enable Automated
+                Software Engineering}},
+  booktitle = {Advances in Neural Information Processing Systems 37
+               (NeurIPS 2024)},
+  year      = {2024},
+  note      = {arXiv:2405.15793}
+}
+
+@misc{codeagentsurvey25,
+  author       = {Dong, Yihong and Jiang, Xue and Qian, Jiaru and Wang, Tian and
+                  Zhang, Kechi and Jin, Zhi and Li, Ge},
+  title        = {{A Survey on Code Generation with LLM-based Agents}},
+  howpublished = {arXiv:2508.00083},
+  year         = {2025}
+}
+
+@inproceedings{greshake23,
+  author    = {Greshake, Kai and Abdelnabi, Sahar and Mishra, Shailesh and
+               Endres, Christoph and Holz, Thorsten and Fritz, Mario},
+  title     = {{Not What You've Signed Up For: Compromising Real-World
+               LLM-Integrated Applications with Indirect Prompt Injection}},
+  booktitle = {16th ACM Workshop on Artificial Intelligence and Security
+               (AISec '23)},
+  year      = {2023},
+  doi       = {10.1145/3605764.3623985}
+}
+
+@inproceedings{liupijack24,
+  author    = {Liu, Yupei and Jia, Yuqi and Geng, Runpeng and Jia, Jinyuan and
+               Gong, Neil Zhenqiang},
+  title     = {{Formalizing and Benchmarking Prompt Injection Attacks and
+               Defenses}},
+  booktitle = {33rd USENIX Security Symposium (USENIX Security 24)},
+  year      = {2024}
+}
+
+@misc{piappllm23,
+  author       = {Liu, Yi and Deng, Gelei and Li, Yuekang and Wang, Kailong and
+                  Wang, Zihao and Wang, Xiaofeng and Zhang, Tianwei and
+                  Liu, Yepang and Wang, Haoyu and Zheng, Yan and Liu, Yang},
+  title        = {{Prompt Injection Attack against LLM-integrated Applications}},
+  howpublished = {arXiv:2306.05499},
+  year         = {2023}
+}
+
+@inproceedings{agentdojo24,
+  author       = {Debenedetti, Edoardo and Zhang, Jie and Balunovi{\'c}, Mislav and
+                  Beurer-Kellner, Luca and Fischer, Marc and Tram{\`e}r, Florian},
+  title        = {{AgentDojo: A Dynamic Environment to Evaluate Prompt Injection
+                   Attacks and Defenses for LLM Agents}},
+  booktitle    = {Advances in Neural Information Processing Systems 37
+                  (NeurIPS 2024) Datasets and Benchmarks Track},
+  year         = {2024}
+}
+
+@inproceedings{asb24,
+  author    = {Zhang, Hanrong and Huang, Jingyuan and Mei, Kai and Yao, Yifei and
+               Wang, Zhenting and Zhan, Chenlu and Wang, Hongwei and
+               Zhang, Yongfeng},
+  title     = {{Agent Security Bench (ASB): Formalizing and Benchmarking
+                Attacks and Defenses in LLM-based Agents}},
+  booktitle = {13th International Conference on Learning Representations
+               (ICLR 2025)},
+  year      = {2025},
+  note      = {arXiv:2410.02644}
+}
+
+@article{mcplandscape25,
+  author    = {Hou, Xinyi and Zhao, Yanjie and Wang, Shenao and Wang, Haoyu},
+  title     = {{Model Context Protocol (MCP): Landscape, Security Threats,
+               and Future Research Directions}},
+  journal   = {ACM Transactions on Software Engineering and Methodology},
+  year      = {2025},
+  doi       = {10.1145/3796519},
+  note      = {arXiv:2503.23278}
+}
+
+@article{mcpsecmaint25,
+  author    = {Hasan, Mohammed Mehedi and Li, Hao and Fallahzadeh, Emad and
+               Rajbahadur, Gopi Krishnan and Adams, Bram and Hassan, Ahmed E.},
+  title     = {{Model Context Protocol (MCP) at First Glance: Studying the
+               Security and Maintainability of MCP Servers}},
+  journal   = {ACM Transactions on Software Engineering and Methodology},
+  year      = {2025},
+  doi       = {10.1145/3814959},
+  note      = {arXiv:2506.13538}
+}
+
+@inproceedings{mcptox25,
+  author    = {Wang, Zhiqiang and Gao, Yichao and Wang, Yanting and
+               Liu, Suyuan and Sun, Haifeng and Cheng, Haoran and
+               Shi, Guanquan and Du, Haohua and Li, Xiangyang},
+  title     = {{MCPTox: A Benchmark for Tool Poisoning on Real-World
+               MCP Servers}},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence
+               (AAAI-26), vol.\ 40, no.\ 42},
+  pages     = {35811--35819},
+  year      = {2026},
+  doi       = {10.1609/aaai.v40i42.40895},
+  note      = {arXiv:2508.14925}
+}
+
+@inproceedings{redcode24,
+  author    = {Guo, Chengquan and Liu, Xun and Xie, Chulin and Zhou, Andy and
+               Zeng, Yi and Lin, Zinan and Song, Dawn and Li, Bo},
+  title     = {{RedCode: Risky Code Execution and Generation Benchmark for
+                Code Agents}},
+  booktitle = {Advances in Neural Information Processing Systems 37
+               (NeurIPS 2024) Datasets and Benchmarks Track},
+  year      = {2024},
+  note      = {arXiv:2411.07781}
+}
+
+@inproceedings{toolemu24,
+  author    = {Ruan, Yangjun and Dong, Honghua and Wang, Andrew and
+               Pitis, Silviu and Zhou, Yongchao and Ba, Jimmy and
+               Dubois, Yann and Maddison, Chris J. and Hashimoto, Tatsunori},
+  title     = {{Identifying the Risks of LM Agents with an LM-Emulated
+                Sandbox}},
+  booktitle = {12th International Conference on Learning Representations
+               (ICLR 2024)},
+  year      = {2024},
+  note      = {ToolEmu; arXiv:2309.15817}
+}
+
+@inproceedings{agentharm24,
+  author    = {Andriushchenko, Maksym and Souly, Alexandra and
+               Dziemian, Mateusz and Duenas, Derek and Lin, Maxwell and
+               Wang, Justin and Hendrycks, Dan and Zou, Andy and
+               Kolter, Zico and Fredrikson, Matt and others},
+  title     = {{AgentHarm: A Benchmark for Measuring Harmfulness of LLM
+                Agents}},
+  booktitle = {13th International Conference on Learning Representations
+               (ICLR 2025)},
+  year      = {2025},
+  note      = {arXiv:2410.09024}
+}
+
+@inproceedings{camel25,
+  author    = {Debenedetti, Edoardo and Shumailov, Ilia and Fan, Tianqi and
+               Hayes, Jamie and Carlini, Nicholas and Fabian, Daniel and
+               Kern, Christoph and Shi, Chongyang and Terzis, Andreas and
+               Tram{\`e}r, Florian},
+  title     = {{Defeating Prompt Injections by Design}},
+  booktitle = {2026 IEEE Conference on Secure and Trustworthy Machine
+               Learning (SaTML)},
+  year      = {2026},
+  note      = {CaMeL; arXiv:2503.18813}
+}
+
+@inproceedings{sfi93,
+  author    = {Wahbe, Robert and Lucco, Steven and Anderson, Thomas E. and
+               Graham, Susan L.},
+  title     = {{Efficient Software-based Fault Isolation}},
+  booktitle = {14th ACM Symposium on Operating Systems Principles (SOSP '93)},
+  year      = {1993},
+  doi       = {10.1145/168619.168635}
+}
+
+@inproceedings{nacl09,
+  author    = {Yee, Bennet and Sehr, David and Dardyk, Gregory and
+               Chen, J. Bradley and Muth, Robert and Ormandy, Tavis and
+               Okasaka, Shiki and Narula, Neha and Fullagar, Nicholas},
+  title     = {{Native Client: A Sandbox for Portable, Untrusted x86 Native
+               Code}},
+  booktitle = {30th IEEE Symposium on Security and Privacy (S\&P 2009)},
+  year      = {2009},
+  doi       = {10.1109/SP.2009.25}
+}
+
+@inproceedings{swivel21,
+  author    = {Narayan, Shravan and Disselkoen, Craig and Moghimi, Daniel and
+               Cauligi, Sunjay and Johnson, Evan and Gang, Zhao and
+               Vahldiek-Oberwagner, Anjo and Sahita, Ravi and Shacham, Hovav and
+               Tullsen, Dean and Stefan, Deian},
+  title     = {{Swivel: Hardening WebAssembly against Spectre}},
+  booktitle = {30th USENIX Security Symposium (USENIX Security 21)},
+  pages     = {1433--1450},
+  year      = {2021},
+  note      = {arXiv:2102.12730}
+}
+
+@inproceedings{spectre18,
+  author    = {Kocher, Paul and Horn, Jann and Fogh, Anders and Genkin, Daniel and
+               Gruss, Daniel and Haas, Werner and Hamburg, Mike and Lipp, Moritz and
+               Mangard, Stefan and Prescher, Thomas and Schwarz, Michael and
+               Yarom, Yuval},
+  title     = {{Spectre Attacks: Exploiting Speculative Execution}},
+  booktitle = {2019 IEEE Symposium on Security and Privacy (S\&P 2019)},
+  pages     = {1--19},
+  year      = {2019},
+  doi       = {10.1109/SP.2019.00002},
+  note      = {arXiv:1801.01203}
+}
+
+@article{transientsurvey20,
+  author  = {Xiong, Wenjie and Szefer, Jakub},
+  title   = {{Survey of Transient Execution Attacks and Their Mitigations}},
+  journal = {ACM Computing Surveys},
+  volume  = {54},
+  number  = {3},
+  pages   = {54:1--54:36},
+  year    = {2021},
+  doi     = {10.1145/3442479},
+  note    = {arXiv:2005.13435}
+}
+
+@inproceedings{lightvm17,
+  author    = {Manco, Filipe and Lupu, Costin and Schmidt, Florian and
+               Mendes, Jose and Kuenzer, Simon and Sati, Sumit and
+               Yasukata, Kenichi and Raiciu, Costin and Huici, Felipe},
+  title     = {{My VM is Lighter (and Safer) than your Container}},
+  booktitle = {26th ACM Symposium on Operating Systems Principles (SOSP '17)},
+  year      = {2017},
+  doi       = {10.1145/3132747.3132763}
+}
+
+@inproceedings{ondemandlambda23,
+  author    = {Brooker, Marc and Danilov, Mike and Greenwood, Chris and
+               Piwonka, Phil},
+  title     = {{On-demand Container Loading in AWS Lambda}},
+  booktitle = {2023 USENIX Annual Technical Conference (USENIX ATC 23)},
+  pages     = {315--328},
+  year      = {2023},
+  note      = {arXiv:2305.13162}
+}
+
+@inproceedings{mitosis23,
+  author    = {Wei, Xingda and Lu, Fangming and Wang, Tianxia and Gu, Jinyu and
+               Yang, Yuhan and Chen, Rong and Chen, Haibo},
+  title     = {{No Provisioned Concurrency: Fast RDMA-codesigned Remote Fork
+                for Serverless Computing}},
+  booktitle = {17th USENIX Symposium on Operating Systems Design and
+               Implementation (OSDI 23)},
+  year      = {2023},
+  note      = {Mitosis; arXiv:2203.10225}
+}
+
+@inproceedings{tetris22,
+  author    = {Li, Jie and Zhao, Laiping and Yang, Yanan and Zhan, Kunlin and
+               Li, Keqiu},
+  title     = {{Tetris: Memory-efficient Serverless Inference through Tensor
+               Sharing}},
+  booktitle = {2022 USENIX Annual Technical Conference (USENIX ATC 22)},
+  year      = {2022}
+}
+
+@inproceedings{upm23,
+  author    = {Qiu, Wei and Copik, Marcin and Wang, Yun and Calotoiu, Alexandru and
+               Hoefler, Torsten},
+  title     = {{User-guided Page Merging for Memory Deduplication in
+                Serverless Systems}},
+  booktitle = {2023 IEEE International Conference on Big Data (BigData)},
+  pages     = {159--169},
+  year      = {2023},
+  doi       = {10.1109/BigData59044.2023.10386487},
+  note      = {arXiv:2311.13588}
+}
+
+@inproceedings{faastlane21,
+  author    = {Kotni, Swaroop and Nayak, Ajay and Ganapathy, Vinod and
+               Basu, Arkaprava},
+  title     = {{Faastlane: Accelerating Function-as-a-Service Workflows}},
+  booktitle = {2021 USENIX Annual Technical Conference (USENIX ATC 21)},
+  year      = {2021}
+}
+
+@inproceedings{palette23,
+  author    = {Abdi, Mania and Ginzburg, Sam and Lin, Charles and Faleiro, Jose and
+               Chaudhry, Gohar Irfan and Goiri, {\'I}{\~n}igo and
+               Bianchini, Ricardo and Berger, Daniel S. and Fonseca, Rodrigo},
+  title     = {{Palette Load Balancing: Locality Hints for Serverless Functions}},
+  booktitle = {18th European Conference on Computer Systems (EuroSys '23)},
+  year      = {2023},
+  doi       = {10.1145/3552326.3567496}
+}
+
+@inproceedings{guardian24,
+  author    = {Pavlidakis, Manos and Vasiliadis, Giorgos and Mavridis, Stelios and
+               Argyros, Anargyros and Chazapis, Antony and Bilas, Angelos},
+  title     = {{Guardian: Safe GPU Sharing in Multi-Tenant Environments}},
+  booktitle = {25th International Middleware Conference (Middleware '24)},
+  year      = {2024},
+  doi       = {10.1145/3652892.3700768},
+  note      = {arXiv:2401.09290}
+}
+
+@misc{gpumtsurvey22,
+  author       = {Yu, Fuxun and Wang, Di and Shangguan, Longfei and Zhang, Minjia and
+                  Liu, Chenchen and Chen, Xiang},
+  title        = {{A Survey of Multi-Tenant Deep Learning Inference on GPU}},
+  howpublished = {arXiv:2203.09040},
+  year         = {2022}
+}
+
+@article{serverlesssecuring21,
+  author  = {Li, Xing and Leng, Xue and Chen, Yan},
+  title   = {{Securing Serverless Computing: Challenges, Solutions, and
+              Opportunities}},
+  journal = {IEEE Network},
+  volume  = {37},
+  number  = {2},
+  pages   = {166--173},
+  year    = {2023},
+  doi     = {10.1109/MNET.005.2100335},
+  note    = {arXiv:2105.12581}
+}
+
+@article{llmsecsurvey25,
+  author  = {Yao, Yifan and Duan, Jinhao and Xu, Kaidi and Cai, Yuanfang and
+             Sun, Zhibo and Zhang, Yue},
+  title   = {{A Survey on Large Language Model (LLM) Security and Privacy:
+              The Good, the Bad, and the Ugly}},
+  journal = {High-Confidence Computing},
+  volume  = {4},
+  number  = {2},
+  pages   = {100211},
+  year    = {2024},
+  doi     = {10.1016/j.hcc.2024.100211},
+  note    = {arXiv:2312.02003}
+}
+
+@misc{jailbreaksurvey24,
+  author       = {Yi, Sibo and Liu, Yule and Sun, Zhen and Cong, Tianshuo and
+                  He, Xinlei and Song, Jiaxing and Xu, Ke and Li, Qi},
+  title        = {{Jailbreak Attacks and Defenses Against Large Language Models:
+                   A Survey}},
+  howpublished = {arXiv:2407.04295},
+  year         = {2024}
+}
+
+@inproceedings{edgeunikernel24,
+  author    = {Moebius, Felix and Pfandzelter, Tobias and Bermbach, David},
+  title     = {{Are Unikernels Ready for Serverless on the Edge?}},
+  booktitle = {2024 IEEE International Conference on Cloud Engineering (IC2E)},
+  year      = {2024},
+  note      = {arXiv:2403.00515}
+}
+
+@inproceedings{sure24,
+  author    = {Parola, Federico and Qi, Shixiong and Narappa, Anvaya B. and
+               Ramakrishnan, K. K. and Risso, Fulvio},
+  title     = {{SURE: Secure Unikernels Make Serverless Computing Rapid and
+               Efficient}},
+  booktitle = {2024 ACM Symposium on Cloud Computing (SoCC '24)},
+  year      = {2024},
+  doi       = {10.1145/3698038.3698558}
+}
+
+@inproceedings{streambox24,
+  author    = {Wu, Hao and Yu, Yue and Deng, Junxiao and Ibrahim, Shadi and
+               Wu, Song and Fan, Hao and Cheng, Ziyue and Jin, Hai},
+  title     = {{StreamBox: A Lightweight GPU Sandbox for Serverless Inference
+               Workflow}},
+  booktitle = {2024 USENIX Annual Technical Conference (USENIX ATC 24)},
+  year      = {2024}
+}
+
+@article{coldstartopt24,
+  author  = {Vahidinia, Parichehr and Farahani, Bahar and
+             Aliee, Fereidoon Shams},
+  title   = {{A Survey on the Cold Start Latency Approaches in Serverless
+              Computing: An Optimization-based Perspective}},
+  journal = {Computing},
+  publisher = {Springer},
+  volume  = {106},
+  number  = {11},
+  pages   = {3755--3809},
+  year    = {2024},
+  doi     = {10.1007/s00607-024-01335-5}
+}
+
+@misc{teecontainerhard21,
+  author       = {Liu, Weijie and Chen, Hongbo and Wang, XiaoFeng and Li, Zhi and
+                  Zhang, Danfeng and Wang, Wenhao and Tang, Haixu},
+  title        = {{Understanding TEE Containers, Easy to Use? Hard to Trust}},
+  howpublished = {arXiv:2109.01923},
+  year         = {2021}
+}
+
+@misc{mcpthreatmodel26,
+  author       = {Jamshidi, Saeid and Moradi Dakhel, Arghavan and Nafi, Kawser Wazed and
+                  Khomh, Foutse},
+  title        = {{Semantic Attacks on Tool-Augmented LLMs: Securing the Model
+                   Context Protocol Against Descriptor-Level Manipulation}},
+  howpublished = {arXiv:2512.06556},
+  year         = {2025}
+}
+
+@inproceedings{struq24,
+  author    = {Chen, Sizhe and Piet, Julien and Sitawarin, Chawin and
+               Wagner, David},
+  title     = {{StruQ: Defending Against Prompt Injection with Structured
+                Queries}},
+  booktitle = {34th USENIX Security Symposium (USENIX Security 25)},
+  year      = {2025},
+  note      = {arXiv:2402.06363}
+}
+
+@article{secconcernsllm25,
+  author  = {Li, Miles Q. and Fung, Benjamin C. M.},
+  title   = {{Security Concerns for Large Language Models: A Survey}},
+  journal = {Journal of Information Security and Applications},
+  volume  = {95},
+  pages   = {104284},
+  year    = {2025},
+  doi     = {10.1016/j.jisa.2025.104284},
+  note    = {arXiv:2505.18889}
+}

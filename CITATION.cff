@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this companion archive, please cite the manuscript referenced under preferred-citation."
+title: "Companion archive for: Distributed Sandboxing and Secure Execution of LLM-Generated Code at Scale"
+type: dataset
+license: CC-BY-4.0
+authors:
+  - family-names: Chukkapalli
+    given-names: Divya
+    orcid: "https://orcid.org/0009-0005-4691-3395"
+    affiliation: "Independent Researcher, Apex NC"
+  - family-names: Mishra
+    given-names: Sanjay
+    orcid: "https://orcid.org/0009-0006-7854-996X"
+    affiliation: "Independent Researcher, Raleigh NC"
+  - family-names: Swami
+    given-names: Piyush
+    orcid: "https://orcid.org/0000-0001-5839-352X"
+    affiliation: "Electronics & Physics Department (EPh), Télécom SudParis"
+    email: piyush.swami@telecom-sudparis.eu
+  - family-names: Naik
+    given-names: Ganesh R
+    orcid: "https://orcid.org/0000-0003-1790-9838"
+    affiliation: "School of Technology, Torrens University, Adelaide"
+    email: ganesh.naik@torrens.edu.au
+preferred-citation:
+  type: article
+  title: "Distributed Sandboxing and Secure Execution of LLM-Generated Code at Scale"
+  authors:
+    - family-names: Chukkapalli
+      given-names: Divya
+    - family-names: Mishra
+      given-names: Sanjay
+    - family-names: Swami
+      given-names: Piyush
+    - family-names: Naik
+      given-names: Ganesh R
+  year: 2026
+  journal: "arXiv preprint"
+  url: "https://arxiv.org/abs/XXXX.XXXXX"
