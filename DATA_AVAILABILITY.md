@@ -17,5 +17,5 @@ No human-subjects data, proprietary traces, or licensed corpora are
 included. All cited works are public preprints or published papers; see the
 manuscript's references and the grey-literature provenance advisory in §8.5.
 
-**Repository:** `<GITHUB URL>` · **Archived DOI:** `<ZENODO DOI>`
+**Repository:** <https://github.com/dchukkapalli-dev/distributed-sandboxing-companion> · **Archived DOI:** `<ZENODO DOI>`
 (populated at submission via the companion-archive deposit step).

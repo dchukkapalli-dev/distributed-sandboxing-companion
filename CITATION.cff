@@ -3,6 +3,7 @@ message: "If you use this companion archive, please cite the manuscript referenc
 title: "Companion archive for: Distributed Sandboxing and Secure Execution of LLM-Generated Code at Scale"
 type: dataset
 license: CC-BY-4.0
+repository-code: "https://github.com/dchukkapalli-dev/distributed-sandboxing-companion"
 authors:
   - family-names: Chukkapalli
     given-names: Divya
