@@ -4,6 +4,12 @@ Machine-readable artefacts accompanying the survey. Everything here is
 regenerable and human-auditable; nothing requires a GPU, a cluster, or any
 third-party Python package.
 
+**Deposit.** Permanently archived on Zenodo under the concept DOI
+[10.5281/zenodo.21422679](https://doi.org/10.5281/zenodo.21422679) (always
+resolves to the latest version; v1.0.0 specifically:
+[10.5281/zenodo.21422680](https://doi.org/10.5281/zenodo.21422680)). Source
+mirror at <https://github.com/dchukkapalli-dev/distributed-sandboxing-companion>.
+
 ## Contents
 
 | Path | What it is |
